@@ -25,7 +25,7 @@ extension Slimane {
 
 extension Slimane {
     public func get(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.get(path, handler: handler)
         get(path, handler: responder)
     }
     
@@ -37,7 +37,7 @@ extension Slimane {
 
 extension Slimane {
     public func options(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.options(path, handler: handler)
         options(path, handler: responder)
     }
     
@@ -49,7 +49,7 @@ extension Slimane {
 
 extension Slimane {
     public func post(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.post(path, handler: handler)
         post(path, handler: responder)
     }
     
@@ -61,7 +61,7 @@ extension Slimane {
 
 extension Slimane {
     public func put(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.put(path, handler: handler)
         put(path, handler: responder)
     }
     
@@ -73,7 +73,7 @@ extension Slimane {
 
 extension Slimane {
     public func patch(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.patch(path, handler: handler)
         patch(path, handler: responder)
     }
     
@@ -85,7 +85,7 @@ extension Slimane {
 
 extension Slimane {
     public func delete(path: String, handler: AsyncRespond){
-        let responder = BasicAsyncResponder(handler)
+        let responder = delegate.delete(path, handler: handler)
         delete(path, handler: responder)
     }
     

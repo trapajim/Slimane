@@ -26,7 +26,10 @@ public class Slimane {
 
     public var errorHandler: ErrorProtocol -> Response = defaultErrorHandler
 
-    public init(){
+    var delegate: RouterProtocol;
+    
+    public init(delegate: RouterProtocol){
+        self.delegate = delegate
         self.router = Router { _, result in
             result { Response() }
         }
